@@ -54,4 +54,4 @@ VALUES
 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
 'travel',
 '/images/photo-9.jpg',
-'https://eumovzkxoivpebjwcgny.supabase.co/storage/v1/object/public/demo-75/card-75/photo-9.jpg'),
+'https://eumovzkxoivpebjwcgny.supabase.co/storage/v1/object/public/demo-75/card-75/photo-9.jpg');

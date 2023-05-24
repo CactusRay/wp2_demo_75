@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 
 let pool;
 
-if(process.env.NODE_ENV === 'SUPABASE'){
+if(process.env.NODE_ENV === 'SUPABAS'){
 
     pool = new Pool({
         user: 'postgres',

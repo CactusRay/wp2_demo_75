@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const cors = require('cors');
+
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -18,6 +20,10 @@ const card2Router_75 = require('./routes/card2_75');
 
 const card2ApiRouter_75 = require('./routes/api/apiCard2Router');
 
+const apiMenuRouter_75 = require('./routes/api/apiMenuRouter_75');
+
+
+
 var app = express();
 
 // view engine setup
@@ -30,6 +36,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(cors());
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
@@ -37,6 +45,7 @@ app.use('/card_75', cardRouter_75);
 app.use('/card2_75', card2Router_75);
 
 app.use('/api/card2_75', card2ApiRouter_75);
+app.use('/api/node_menu_75', apiMenuRouter_75);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
